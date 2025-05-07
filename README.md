@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# UI サンプル
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ■ 概要
+
+モダンな開発手法を取り入れてUIを用意するために立ち上げた。  
+
+#### ❑ テーマ
+ダーク/ライトテーマの選択。
+next-themes ライブラリを試した。
+
+#### ❑ 国際化（i18n）
+言語の選択などに対応。
+jsonを呼ぶ方式を試した。規模が大きくなる場合はライブラリの導入が良いらしい。
+
+---
+
+## ■ 技術スタック
+
+#### ❑ 導入済み
+
+- Next.js       (Reactフレームワーク)
+- TypeScript    (JavaScriptのスーパーセット)
+- Tailwind CSS  (ユーティリティファーストCSSフレームワーク)
+- shadcn/ui     (Radix UIベースのUIコンポーネントライブラリ)
+- framer-motion (Reactアニメーションライブラリ)
+- next-themes   (Next.js用のテーマ切り替えライブラリ)
+
+#### ❑ 導入予定
+
+- next-intl     (国際化)
+- MUI DataGrid  (表やカードのデザイン向け)
+
+---
+
+## ■ 環境セットアップ
+
+#### ❑ プロジェクトのクローン
+```
+git clone <リポジトリのURL>  
+cd <プロジェクトディレクトリ名>  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### ❑ Node.jsとnpmの確認
+```
+node -v  
+npm -v  
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### ❑ 依存関係をインストール
+```
+npm install  
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### ❑ 環境変数の設定 (もしあれば)
+```
+.envファイルを作成  
+```
 
-## Learn More
+#### ❑ 開発サーバーを起動
+```
+npm run dev  
 
-To learn more about Next.js, take a look at the following resources:
+ブラウザで http://localhost:3000 を開く  
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ■ ディレクトリ構成
 
-## Deploy on Vercel
+```
+ui-sample/
+├── src/
+│   ├── app/                # Next.js App Router のルートディレクトリ (ページ、レイアウトなど)
+│   │   ├── preview/        # 今回作成したプレビュー画面のディレクトリ
+│   │   │   └── page.tsx    # プレビュー画面のコンポーネント
+│   │   └── ...
+│   ├── components/         # 再利用可能な UI コンポーネント
+│   │   ├── ui/             # shadcn/ui のコンポーネント (button, input など)
+│   │   └── ...
+│   ├── lib/                # ユーティリティ関数など
+│   ├── styles/             # グローバル CSS や Tailwind CSS の設定
+│   │   └── globals.css
+│   └── ...
+├── public/                 # 静的ファイル (画像など)
+├── .env                    # ローカル環境の環境変数
+├── package.json            # プロジェクトの依存関係やスクリプト
+├── README.md               # このファイル
+├── tailwind.config.js      # Tailwind CSS の設定ファイル
+├── postcss.config.js       # PostCSS の設定ファイル
+└── ...
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
