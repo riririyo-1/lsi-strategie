@@ -35,6 +35,18 @@ jsonを呼ぶ方式を試した。規模が大きくなる場合はライブラ�
 
 ---
 
+## ■ プレビュー画面
+
+#### ❑ ライトモード/日本語
+
+<img src='.\images\image250507_211934.png' alt='image' style="width: 600px; border: 1px solid black;">
+
+#### ❑ ダークモード/英語
+
+<img src='.\images\image250507_211954.png' alt='image' style="width: 600px; border: 1px solid black;">
+
+---
+
 ## ■ 環境セットアップ
 
 #### ❑ プロジェクトのクローン
