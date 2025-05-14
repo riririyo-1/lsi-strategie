@@ -75,7 +75,7 @@ npm install
 npm run dev  
 nohup npm run dev ：バックグラウンド実行  
 
-ブラウザで http://localhost:3000 を開く  
+ブラウザで http://localhost:3005 を開く  
 ```
 
 ---
