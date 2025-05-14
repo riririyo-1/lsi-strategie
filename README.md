@@ -73,6 +73,7 @@ npm install
 #### ❑ 開発サーバーを起動
 ```
 npm run dev  
+nohup npm run dev ：バックグラウンド実行  
 
 ブラウザで http://localhost:3000 を開く  
 ```
